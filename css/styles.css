@@ -1,0 +1,71 @@
+﻿:root{--navy:#223047;--ink:#233148;--cyan:#00fff0;--muted:#97a4be;--line:#4d586b;--white:#fff;
+ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;font-family:"Trebuchet MS",Arial,sans-serif;font-weight:500;background:var(--white);color:var(--ink);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+h1,h2,h3,h4,p,ul{margin:0;padding:0}
+ul{list-style:none}
+.container{width:100%;max-width:1173px;margin:0 auto;padding:0 15px;position:relative}
+.title{font-weight:400;font-size:30px;line-height:40px;color:var(--ink)}
+.text{font-size:14px;line-height:29px;color:var(--muted);font-weight:500}
+.btn{display:inline-flex;align-items:center;justify-content:center;font:500 14px "Trebuchet MS",Arial,sans-serif;border-radius:0;transition:transform .2s,background .2s,color .2s,box-shadow .2s;cursor:pointer;border:0}
+.btn:hover{transform:translateY(-2px)}
+.btn-cyan{background:var(--cyan);color:var(--ink)}
+.btn-cyan:hover{box-shadow:0 8px 20px rgba(0,255,240,.35)}
+
+/* Página: inicio.html e index.html - cabecera y navegación */
+.hero{background:var(--navy);height:700px;position:relative;color:var(--white)}
+.nav{height:71px;border-bottom:1px solid var(--line)}
+.nav .container{height:70px;display:flex;align-items:center}
+.logo img{width:83px;height:33px;margin-left:11px}
+.menu-links{display:flex;align-items:center;gap:50px;font-size:14px;margin-left:225px}
+.menu-links a{display:flex;align-items:center;gap:10px;transition:color .2s}
+.menu-links a:hover{color:var(--cyan)}
+.menu-links .arrow{width:10px;height:7px;margin-top:3px}
+.nav-right{margin-left:auto;display:flex;align-items:center;gap:27px}
+.nav .btn-cyan{width:141px;height:43px;border-radius:4px}
+.burger img{width:28px;height:25px}
+.burger{padding:0;border:0;background:transparent;color:inherit;cursor:pointer}
+.hero-content{padding:201px 0 0 95px;max-width:520px}
+.hero h1{font-weight:400;font-size:39.4px;line-height:49px;color:var(--white);letter-spacing:.2px}
+.hero p{margin-top:50px;max-width:420px}
+.hero-btns{display:flex;gap:24px;margin-top:49px}
+.hero-btns .btn{border-radius:4px}
+.hero-btns .btn-cyan{width:171px;height:42px}
+.btn-outline{border:1px solid #e1e3e6;color:var(--white);background:transparent;width:146px;height:44px;margin-top:-1px}
+.btn-outline:hover{background:var(--white);color:var(--ink)}
+.phone{position:absolute;left:797px;top:132px;width:280px;height:582px;z-index:2}
+.phone img{width:100%;height:100%}
+
+/* Página: caracteristicas.html - servicios y características */
+.services{padding:209px 0 150px;text-align:center}
+.sep{width:99px;height:6px;background:var(--cyan);margin:81px auto 0}
+.cards{display:flex;justify-content:space-between;margin:98px -1px 0}
+.card{width:273px}
+.card img{margin:0 auto;width:117px;height:106px}
+.card h3{margin-top:34px;font-weight:500;font-size:17px;line-height:24px}
+.card p{margin:18px auto 0;max-width:222px}
+
+/* RESPONSIVE */
+@media (max-width:1100px){
+ .menu-links{margin-left:60px;gap:30px}
+ .phone{left:auto;right:15px;width:220px;height:auto}
+ .cards{flex-wrap:wrap;gap:50px 20px;justify-content:center}
+}
+@media (max-width:820px){
+ .hero{height:auto;padding-bottom:70px}
+ .menu-links{display:none}
+ .hero-content{padding:70px 0 0;max-width:none}
+ .phone{position:relative;left:auto;right:auto;top:auto;margin:50px auto -150px;width:200px}
+ .hero-btns{flex-wrap:wrap}
+ .services{padding:200px 0 80px}
+ .sep{margin-top:40px}
+ .cards{margin-top:60px}
+}
+@media (max-width:480px){
+ .nav .btn-cyan{display:none}
+ .hero h1{font-size:32px;line-height:42px}
+ .title{font-size:25px;line-height:34px}
+}
